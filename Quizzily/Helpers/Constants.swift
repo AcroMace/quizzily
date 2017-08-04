@@ -17,7 +17,12 @@ struct Constants {
     /// Quizlet configuration
     struct Quizlet {
         /// The client ID of Quizzily for Quizlet
-        static let ClientId = Bundle.main.infoDictionary?["QuizletKey"] as! String
+        static var ClientId: String {
+            guard let quizletKey = Bundle.main.infoDictionary?["QuizletKey"] as? String else {
+                fatalError("Quizlet key must be set before compiling app")
+            }
+            return quizletKey
+        }
     }
 
     /// Smooch configuration
