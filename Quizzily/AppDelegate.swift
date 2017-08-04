@@ -24,8 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     */
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        // Set the theme
         application.isStatusBarHidden = false
         application.statusBarStyle = UIStatusBarStyle.lightContent
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().barTintColor = Color.getPrimary()
+        UINavigationBar.appearance().titleTextAttributes = [ NSAttributedStringKey.foregroundColor: UIColor.white ]
+        UINavigationBar.appearance().isTranslucent = false
+
         initSmooch()
         return true
     }
@@ -46,10 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Smooch appearance customization
         smoochSettings.conversationAccentColor = Color.getPrimary()
         smoochSettings.conversationStatusBarStyle = UIStatusBarStyle.lightContent
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().barTintColor = Color.getPrimary()
-        UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName: UIColor.white ]
-        UINavigationBar.appearance().isTranslucent = false
 
         Smooch.initWith(smoochSettings)
     }

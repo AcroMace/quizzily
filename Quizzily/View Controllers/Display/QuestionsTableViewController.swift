@@ -53,7 +53,7 @@ class QuestionsTableViewController: PullDownTableViewController {
         // Set the icon of the settings button
         settingsButton.title = NSString(string: Constants.FontAwesome.Cog) as String
         if let font = UIFont(name: "FontAwesome", size: 22.0) {
-            settingsButton.setTitleTextAttributes([NSFontAttributeName: font], for: UIControlState())
+            settingsButton.setTitleTextAttributes([NSAttributedStringKey.font: font], for: UIControlState())
             settingsButton.setTitlePositionAdjustment(UIOffsetMake(-4, 0), for: .default)
         }
 

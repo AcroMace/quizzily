@@ -198,21 +198,21 @@ class GameViewController: UIViewController {
     /**
         Move to the next question
     */
-    func nextQuestion() {
+    @objc func nextQuestion() {
         self.performSegue(withIdentifier: "nextQuestion", sender: self)
     }
 
     /**
         Move to the game over screen
     */
-    func gameOver() {
+    @objc func gameOver() {
         self.performSegue(withIdentifier: "gameOver", sender: self)
     }
 
     /**
         Exit to the main menu after the user confirms they want to exit
     */
-    func unwindToMainMenu() {
+    @objc func unwindToMainMenu() {
         // Stop the timer unless the user cancels the navigation
         segueTimer?.invalidate()
         // Confirm that the user wants to exit

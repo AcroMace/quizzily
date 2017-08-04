@@ -83,7 +83,7 @@ class TrueFalseViewController: UIViewController {
     /**
         Exit to the main menu
     */
-    func unwindToMainMenu() {
+    @objc func unwindToMainMenu() {
         // Confirm that the user wants to exit
         let alert = UIAlertController(title: "Quit Game", message: "Are you sure you want to quit this game? :(", preferredStyle: .alert)
         let quitAction = UIAlertAction(title: "Quit", style: .default) { (_: UIAlertAction) -> Void in
@@ -210,7 +210,7 @@ class TrueFalseViewController: UIViewController {
     /**
         Move to the game over screen
     */
-    func gameOver() {
+    @objc func gameOver() {
         self.performSegue(withIdentifier: "gameOver", sender: self)
     }
 

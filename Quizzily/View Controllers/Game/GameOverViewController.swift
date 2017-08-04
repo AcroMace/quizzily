@@ -133,7 +133,7 @@ class GameOverViewController: UIViewController {
     /**
         Exit to the main menu
     */
-    func unwindToMainMenu() {
+    @objc func unwindToMainMenu() {
         performSegue(withIdentifier: GameOverViewController.unwindToMainMenuSegueIdentifier, sender: self)
     }
 
