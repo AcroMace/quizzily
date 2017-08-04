@@ -2,6 +2,8 @@
 
 # Quizzily
 
+[![Build Status](https://travis-ci.org/AcroMace/quizzily.svg?branch=master)](https://travis-ci.org/AcroMace/quizzily) [![DUB](https://img.shields.io/dub/l/vibe-d.svg?maxAge=2592000)](https://github.com/AcroMace/quizzily/blob/master/LICENSE)
+
 Quizzily creates games from your flashcards on Quizlet
 
 A Swift app using [Quizlet's API](https://quizlet.com/api/2.0/docs) and Core Data to create quizzes.
