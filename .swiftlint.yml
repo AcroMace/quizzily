@@ -6,7 +6,6 @@ disabled_rules:
   # Should enable later
   - force_cast
   - identifier_name
-  - large_tuple
 
 excluded:
   - Pods

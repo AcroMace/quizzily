@@ -8,6 +8,33 @@
 
 import UIKit
 
+/// Calculated results at the end of the game
+struct GameResult {
+    /// The total amount of points earned
+    let points: Int
+
+    /// The total questions answered correctly
+    let totalCorrect: Int
+
+    /// New streak after the game
+    let streak: Int
+
+    /// Whether or not all questions were answered correctly
+    let allCorrect: Bool
+}
+
+/// Text shown at the end of the game screen
+struct GameResultText {
+    /// Above points text (i.e. "Yay you got")
+    let abovePointsText: String
+
+    /// Below points text (i.e. "points! :)")
+    let belowPointsText: String
+
+    /// Description text (i.e. "X questions correct!")
+    let descriptionText: String
+}
+
 /**
     Screen shown when the player finishes a game
 */
@@ -78,18 +105,18 @@ class GameOverViewController: UIViewController {
         Streak.playedGame() // Add to the streak
 
         // Calculate and add the points earned
-        let (points, totalCorrect, streak, allCorrect): (Int, Int, Int, Bool) = calculatePoints()
-        Points.add(points)
+        let gameResult = calculatePoints()
+        _ = Points.add(gameResult.points)
 
         // Change the text
-        let (abovePoints, belowPoints, description) = getLabelText(points, totalCorrect: totalCorrect, streak: streak, allCorrect: allCorrect)
-        abovePointsLabel.text = abovePoints
-        pointsLabel.text = "\(points)"
-        belowPointsLabel.text = belowPoints
-        setDescriptionText(description)
+        let gameResultText = getLabelText(gameResult: gameResult)
+        abovePointsLabel.text = gameResultText.abovePointsText
+        pointsLabel.text = "\(gameResult.points)"
+        belowPointsLabel.text = gameResultText.belowPointsText
+        setDescriptionText(gameResultText.descriptionText)
 
         // Save changes
-        QuizletHandler.saveChanges()
+        _ = QuizletHandler.saveChanges()
     }
 
     /**
@@ -177,7 +204,7 @@ class GameOverViewController: UIViewController {
 
         - returns: A tuple with `points` (the amount of points earned), `totalCorrect` (amount of questions correct in the game), and `allCorrect` (`true` if all questions were answered correctly)
     */
-    fileprivate func calculatePoints() -> (points: Int, totalCorrect: Int, streak: Int, allCorrect: Bool) {
+    fileprivate func calculatePoints() -> GameResult {
         let totalCorrect = game!.getScore()
         let streak = Streak.get()
         let allCorrect = totalCorrect == Settings.QuestionsPerGame.get()
@@ -188,7 +215,7 @@ class GameOverViewController: UIViewController {
         points *= streak                                              // Streak multiplier
         points *= (allCorrect ? getAllCorrectBonus(totalCorrect) : 1) // All questions correct multiplier
 
-        return (points, totalCorrect, streak, allCorrect)
+        return GameResult(points: points, totalCorrect: totalCorrect, streak: streak, allCorrect: allCorrect)
     }
 
     /**
@@ -216,41 +243,37 @@ class GameOverViewController: UIViewController {
         - Below points label
         - Description text
 
-        and return it as a tuple of the 3 texts
-
-        - parameter points:       The total amount of points earned
-        - parameter totalCorrect: The total questions answered correctly
-        - parameter streak:       New streak after the game
-        - parameter allCorrect:   Whether or not all questions were answered correctly
-
-        - returns: Tuple with the text to put above the points, the text to put below the points, and the text to put for the description
+        - returns: Initialized GameResultText with the text to put above the points, the text to put below the points, and the text to put for the description
     */
-    fileprivate func getLabelText(_ points: Int, totalCorrect: Int, streak: Int, allCorrect: Bool) -> (String, String, String) {
+    fileprivate func getLabelText(gameResult: GameResult) -> GameResultText {
         // Labels above and below the amout of points
         var abovePoints = "Yay! You got"
         var belowPoints = "points :)"
 
         // Number of questions correct
-        var questionsCorrectText = String(totalCorrect)
-        if allCorrect {
+        var questionsCorrectText = String(gameResult.totalCorrect)
+        if gameResult.allCorrect {
             questionsCorrectText = "All"
-        } else if totalCorrect == 0 {
+        } else if gameResult.totalCorrect == 0 {
             questionsCorrectText = "No"
         }
 
         // Format the description text
-        let questionText = "\(questionsCorrectText) question" + (totalCorrect == 1 ? "" : "s") +  " correct!"
-        let streakText = "\(streak) day streak!"
+        let questionText = "\(questionsCorrectText) question" + (gameResult.totalCorrect == 1 ? "" : "s") +  " correct!"
+        let streakText = "\(gameResult.streak) day streak!"
         var descriptionText = "\(questionText)\n\n\(streakText)"
 
         // Adjust text if no questions correct
-        if points == 0 {
+        if gameResult.points == 0 {
             abovePoints = "Oh no! You got"
             belowPoints = "points"
             descriptionText = "Better luck next time! :D"
         }
 
-        return (abovePoints, belowPoints, descriptionText)
+        return GameResultText(
+            abovePointsText: abovePoints,
+            belowPointsText: belowPoints,
+            descriptionText: descriptionText)
     }
 
     /**
