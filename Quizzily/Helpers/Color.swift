@@ -66,14 +66,14 @@ class Color {
         - BlueGrey
     */
     fileprivate enum Shade: String {
-        case Pink = "Pink"
-        case Red = "Red"
-        case Amber = "Amber"
-        case LightGreen = "Light Green"
-        case Teal = "Teal"
-        case Indigo = "Indigo"
-        case Brown = "Brown"
-        case BlueGrey = "Blue Grey"
+        case pink = "Pink"
+        case red = "Red"
+        case amber = "Amber"
+        case lightGreen = "Light Green"
+        case teal = "Teal"
+        case indigo = "Indigo"
+        case brown = "Brown"
+        case blueGrey = "Blue Grey"
     }
 
     /**
@@ -116,56 +116,56 @@ class Color {
             - `AnswerDark` [100]: Answer cells
         */
         fileprivate static let Colors: [Color.Shade: [Color.Category: UIColor]] = [
-            Shade.Pink: [
+            Shade.pink: [
                 Category.primary: UIColor(hex: 0xC2185B),
                 Category.accentLight: UIColor(hex: 0xF8BBD0),
                 Category.accentDark: UIColor(hex: 0xAD1457),
                 Category.answerLight: UIColor(hex: 0xFCE4EC),
                 Category.answerDark: UIColor(hex: 0xF8BBD0)
             ],
-            Shade.Red: [
+            Shade.red: [
                 Category.primary: UIColor(hex: 0xD32F2F),
                 Category.accentLight: UIColor(hex: 0xFFCDD2),
                 Category.accentDark: UIColor(hex: 0xB71C1C),
                 Category.answerLight: UIColor(hex: 0xFFEBEE),
                 Category.answerDark: UIColor(hex: 0xFFCDD2)
             ],
-            Shade.Amber: [
+            Shade.amber: [
                 Category.primary: UIColor(hex: 0xFFA000),
                 Category.accentLight: UIColor(hex: 0xFFECB3),
                 Category.accentDark: UIColor(hex: 0xFF8F00),
                 Category.answerLight: UIColor(hex: 0xFFF8E1),
                 Category.answerDark: UIColor(hex: 0xFFECB3)
             ],
-            Shade.LightGreen: [
+            Shade.lightGreen: [
                 Category.primary: UIColor(hex: 0x689F38),
                 Category.accentLight: UIColor(hex: 0xDCEDC8),
                 Category.accentDark: UIColor(hex: 0x558B2F),
                 Category.answerLight: UIColor(hex: 0xF1F8E9),
                 Category.answerDark: UIColor(hex: 0xDCEDC8)
             ],
-            Shade.Teal: [
+            Shade.teal: [
                 Category.primary: UIColor(hex: 0x00796B),
                 Category.accentLight: UIColor(hex: 0xC8E6C9),
                 Category.accentDark: UIColor(hex: 0x00695C),
                 Category.answerLight: UIColor(hex: 0xE8F5E9),
                 Category.answerDark: UIColor(hex: 0xC8E6C9)
             ],
-            Shade.Indigo: [
+            Shade.indigo: [
                 Category.primary: UIColor(hex: 0x1976D2),
                 Category.accentLight: UIColor(hex: 0xBBDEFB),
                 Category.accentDark: UIColor(hex: 0x1565C0),
                 Category.answerLight: UIColor(hex: 0xE3F2FD),
                 Category.answerDark: UIColor(hex: 0xBBDEFB)
             ],
-            Shade.Brown: [
+            Shade.brown: [
                 Category.primary: UIColor(hex: 0x6D4C41),
                 Category.accentLight: UIColor(hex: 0xD7CCC8),
                 Category.accentDark: UIColor(hex: 0x5D4037),
                 Category.answerLight: UIColor(hex: 0xEFEBE9),
                 Category.answerDark: UIColor(hex: 0xD7CCC8)
             ],
-            Shade.BlueGrey: [
+            Shade.blueGrey: [
                 Category.primary: UIColor(hex: 0x607D8B),
                 Category.accentLight: UIColor(hex: 0xCFD8DC),
                 Category.accentDark: UIColor(hex: 0x546E7A),

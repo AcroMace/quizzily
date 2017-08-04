@@ -88,7 +88,7 @@ class GameReviewTableViewController: UITableViewController {
                 return UITableViewCell()
             }
             // Randomly choose between different emojis
-            cell.emojiLabel.text = Emoji.Celebrate.string()
+            cell.emojiLabel.text = Emoji.celebrate.string()
             return cell
         } else {
             // At least 1 answer incorrect

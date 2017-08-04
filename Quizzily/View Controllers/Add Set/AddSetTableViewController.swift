@@ -89,12 +89,12 @@ class AddSetTableViewController: PullDownTableViewController {
         if searchResults.count == 0 {
             if didSearch { // No search result found
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "EmptySearchCell") as? EmojiTextTableViewCell {
-                    cell.emojiLabel.text = Emoji.Error.string()
+                    cell.emojiLabel.text = Emoji.error.string()
                     return cell
                 }
             } else {
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "NoSearchCell") as? EmojiTextTableViewCell {
-                    cell.emojiLabel.text = Emoji.PointUp.string()
+                    cell.emojiLabel.text = Emoji.pointUp.string()
                     return cell
                 }
             }

@@ -202,9 +202,9 @@ class TrueFalseViewController: UIViewController {
         Reset the smiley label to its original state
     */
     func resetSmileyLabel() {
-        smileyTopLabel.text = "Swipe \(Emoji.PointRight.string()) if true"
+        smileyTopLabel.text = "Swipe \(Emoji.pointRight.string()) if true"
         smileyLabel.text = Emoji.neutralFace.string()
-        smileyBottomLabel.text = "Swipe \(Emoji.PointLeft.string()) if false"
+        smileyBottomLabel.text = "Swipe \(Emoji.pointLeft.string()) if false"
     }
 
     /**

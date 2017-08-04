@@ -44,7 +44,7 @@ class QuestionsTempTableViewController: PullDownTableViewController {
         descriptionText.scrollRangeToVisible(NSRange(location: 0, length: 0))
 
         // Disable the save button if the set has already been downloaded
-        if QuizletHandler.checkIfSetExistsWithId(selectedSet!.id) {
+        if QuizletHandler.setExists(with: selectedSet!.id) {
             disableSaveButton()
         }
     }

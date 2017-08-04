@@ -248,10 +248,10 @@ class QuizletHandler {
 
         - returns: `true` if the set exists, `false` if it does not
     */
-    class func checkIfSetExistsWithId(_ id: Int) -> Bool {
+    class func setExists(with setID: Int) -> Bool {
         let managedContext = getManagedContext()
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "QuestionSet")
-        let predicate = NSPredicate(format: "id == %i", Int64(id))
+        let predicate = NSPredicate(format: "id == %i", Int64(setID))
         fetchRequest.predicate = predicate
         if let fetchResults = (try? managedContext.fetch(fetchRequest)) as? [NSManagedObject] {
             if fetchResults.count > 0 {

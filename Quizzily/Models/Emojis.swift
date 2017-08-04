@@ -15,11 +15,11 @@ enum Emoji {
     case happyFace
     case sadFace
     case neutralFace
-    case PointUp
-    case PointLeft
-    case PointRight
-    case Celebrate
-    case Error
+    case pointUp
+    case pointLeft
+    case pointRight
+    case celebrate
+    case error
 
     //
     // MARK: - Public methods
@@ -34,21 +34,21 @@ enum Emoji {
         let listToUse: [String]
         switch self {
         case .happyFace:
-            listToUse = Emoji.faceHappy
+            listToUse = Emoji.happyFaceEmojis
         case .sadFace:
-            listToUse = Emoji.faceSad
+            listToUse = Emoji.sadFaceEmojis
         case .neutralFace:
-            return Emoji.faceNeutral
-        case .PointUp:
-            listToUse = Emoji.pointUp
-        case .PointLeft:
-            listToUse = Emoji.pointLeft
-        case .PointRight:
-            listToUse = Emoji.pointRight
-        case .Celebrate:
-            listToUse = Emoji.celebrate
-        case .Error:
-            listToUse = Emoji.error
+            return Emoji.neutralFaceEmoji
+        case .pointUp:
+            listToUse = Emoji.pointUpEmojis
+        case .pointLeft:
+            listToUse = Emoji.pointLeftEmojis
+        case .pointRight:
+            listToUse = Emoji.pointRightEmojis
+        case .celebrate:
+            listToUse = Emoji.celebrateEmojis
+        case .error:
+            listToUse = Emoji.errorEmojis
         }
         return getRandomFromArray(listToUse)
     }
@@ -72,27 +72,27 @@ enum Emoji {
 extension Emoji {
 
     /// A list of Emojis that are pointing up
-    fileprivate static let pointUp = ["👆", "☝️", "👆🏻", "☝🏻", "👆🏼", "☝🏼", "👆🏽", "☝🏽", "☝🏾", "👆🏾", "☝🏿", "👆🏿"]
+    fileprivate static let pointUpEmojis = ["👆", "☝️", "👆🏻", "☝🏻", "👆🏼", "☝🏼", "👆🏽", "☝🏽", "☝🏾", "👆🏾", "☝🏿", "👆🏿"]
 
     /// A list of Emojis that are pointing right
-    fileprivate static let pointRight = ["👉", "👉🏻", "👉🏼", "👉🏽", "👉🏾", "👉🏿"]
+    fileprivate static let pointRightEmojis = ["👉", "👉🏻", "👉🏼", "👉🏽", "👉🏾", "👉🏿"]
 
     /// A list of Emojis that are pointing left
-    fileprivate static let pointLeft = ["👈", "👈🏻", "👈🏼", "👈🏽", "👈🏾", "👈🏿"]
+    fileprivate static let pointLeftEmojis = ["👈", "👈🏻", "👈🏼", "👈🏽", "👈🏾", "👈🏿"]
 
     /// A list of Emojis that are celebrating
-    fileprivate static let celebrate = ["🎉", "🎊", "🎓", "💃", "💃🏻", "💃🏼", "💃🏽", "💃🏾", "💃🏿", "👯", "🙌", "🙌🏻", "🙌🏼", "🙌🏽", "🙌🏾", "🙌🏿", "👏", "👏🏻", "👏🏼", "👏🏽", "👏🏾", "👏🏿", "👍", "👍🏻", "👍🏼", "👍🏽", "👍🏾", "👍🏿", "👌", "👌🏻", "👌🏼", "👌🏽", "👌🏾", "👌🏿", "✌️", "✌🏻", "✌🏼", "✌🏽", "✌🏾", "✌🏿", "🐵"]
+    fileprivate static let celebrateEmojis = ["🎉", "🎊", "🎓", "💃", "💃🏻", "💃🏼", "💃🏽", "💃🏾", "💃🏿", "👯", "🙌", "🙌🏻", "🙌🏼", "🙌🏽", "🙌🏾", "🙌🏿", "👏", "👏🏻", "👏🏼", "👏🏽", "👏🏾", "👏🏿", "👍", "👍🏻", "👍🏼", "👍🏽", "👍🏾", "👍🏿", "👌", "👌🏻", "👌🏼", "👌🏽", "👌🏾", "👌🏿", "✌️", "✌🏻", "✌🏼", "✌🏽", "✌🏾", "✌🏿", "🐵"]
 
     /// A list of Emojis to show in the event of an error
-    fileprivate static let error = ["😅", "😐", "😞", "😳", "🙈", "🙉", "🙊"]
+    fileprivate static let errorEmojis = ["😅", "😐", "😞", "😳", "🙈", "🙉", "🙊"]
 
     /// A list of Emojis that look happy
-    fileprivate static let faceHappy = ["😄", "😃", "😊", "😀", "😆", "😎", "😄", "😊", "😋", "☺️"]
+    fileprivate static let happyFaceEmojis = ["😄", "😃", "😊", "😀", "😆", "😎", "😄", "😊", "😋", "☺️"]
 
     /// A list of Emojis that look sad
-    fileprivate static let faceSad = ["😣", "😥", "😒", "😓", "😔", "😖", "😲", "😞", "😟", "😢", "😭", "😦", "😧", "😨", "😩", "😬", "😰", "😱", "😳", "😵", "😡", "😠"]
+    fileprivate static let sadFaceEmojis = ["😣", "😥", "😒", "😓", "😔", "😖", "😲", "😞", "😟", "😢", "😭", "😦", "😧", "😨", "😩", "😬", "😰", "😱", "😳", "😵", "😡", "😠"]
 
     /// The only neutral looking Emoji I could find
-    fileprivate static let faceNeutral = "😐"
+    fileprivate static let neutralFaceEmoji = "😐"
 
 }
