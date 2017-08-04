@@ -37,7 +37,6 @@ class TermDefinitionViewController: UIViewController {
         definitionLabel.text = definition // Change the text of the definition
 
         // Resize the labels
-        // TODO: Ensure that these stay on the screen even if the text is really long
         termLabel.sizeToFit()
         definitionLabel.sizeToFit()
     }

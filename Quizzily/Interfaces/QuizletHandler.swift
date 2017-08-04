@@ -36,8 +36,8 @@ class QuizletHandler {
             }
 
             // Error making a request
-            guard result.error == nil else {
-                print(result.error)
+            if let error = response.error {
+                print(error.localizedDescription)
                 return
             }
 
@@ -102,8 +102,8 @@ class QuizletHandler {
             }
 
             // Error making a request
-            guard result.error == nil else {
-                print(result.error)
+            if let error = response.error {
+                print(error.localizedDescription)
                 return
             }
 

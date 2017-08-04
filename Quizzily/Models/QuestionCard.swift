@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 Andy Cho. All rights reserved.
 //
 
-import Foundation
+// swiftlint:disable identifier_name
+
 import CoreData
 
 /**

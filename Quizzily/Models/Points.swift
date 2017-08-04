@@ -23,7 +23,6 @@ class Points {
         - returns: The amount of points the user has
     */
     class func get() -> Int {
-        // TODO: The points should not be stored in NSUserDefaults
         let defaults = UserDefaults.standard
         let points = defaults.object(forKey: "points") as? Int
         if points == nil {

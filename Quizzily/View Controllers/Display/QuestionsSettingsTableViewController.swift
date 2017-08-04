@@ -54,7 +54,7 @@ class QuestionsSettingsTableViewController: UITableViewController {
     */
     @IBAction func flipSwitchValueChanged(_ sender: AnyObject) {
         selectedSet?.flipTermAndDefinition = flipSwitch.isOn
-        QuizletHandler.saveChanges()
+        _ = QuizletHandler.saveChanges()
     }
 
 }

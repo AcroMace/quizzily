@@ -219,7 +219,7 @@ class GameViewController: UIViewController {
         let alert = UIAlertController(title: "Quit Game", message: "Are you sure you want to quit this game? :(", preferredStyle: .alert)
         let quitAction = UIAlertAction(title: "Quit", style: .default) { (_: UIAlertAction) -> Void in
             // Save changes
-            QuizletHandler.saveChanges()
+            _ = QuizletHandler.saveChanges()
             // Segue back
             self.performSegue(withIdentifier: "unwindToMainMenu", sender: self)
         }

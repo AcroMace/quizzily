@@ -26,6 +26,7 @@
 		636368681BEB480D00BD6E08 /* MDCSwipeToChoose.txt in Resources */ = {isa = PBXBuildFile; fileRef = 636368671BEB480D00BD6E08 /* MDCSwipeToChoose.txt */; };
 		63903A1F1BD0CDCD00A09A7B /* TrueFalseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63903A1E1BD0CDCD00A09A7B /* TrueFalseViewController.swift */; };
 		63903A231BD0DBA500A09A7B /* TrueFalseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63903A221BD0DBA500A09A7B /* TrueFalseCardView.swift */; };
+		639C30B51F34F8C600DFEFDB /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C30B41F34F8C600DFEFDB /* UIColor+Hex.swift */; };
 		639CA1601B52391100FC17FA /* GameReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639CA15F1B52391100FC17FA /* GameReviewTableViewController.swift */; };
 		63A7FEC71BCE22EA0033BFAF /* GameModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A7FEC61BCE22EA0033BFAF /* GameModeTableViewController.swift */; };
 		63AA0CE61AC3A53E00173F5C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AA0CE51AC3A53E00173F5C /* SettingsTableViewController.swift */; };
@@ -95,6 +96,7 @@
 		63903A221BD0DBA500A09A7B /* TrueFalseCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrueFalseCardView.swift; path = "View Controllers/Game/TrueFalseCardView.swift"; sourceTree = "<group>"; };
 		639876041AE5EF03003846AD /* Quizzily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639876051AE5EF03003846AD /* QuizzilyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizzilyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639C30B41F34F8C600DFEFDB /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		639CA15F1B52391100FC17FA /* GameReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameReviewTableViewController.swift; path = "View Controllers/Game/GameReviewTableViewController.swift"; sourceTree = "<group>"; };
 		63A7FEC61BCE22EA0033BFAF /* GameModeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameModeTableViewController.swift; path = "View Controllers/Game/GameModeTableViewController.swift"; sourceTree = "<group>"; };
 		63AA0CE51AC3A53E00173F5C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = "View Controllers/Settings/SettingsTableViewController.swift"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				63AF27431AC4D7DE0062DB2D /* Constants.swift */,
 				6327C7671B0647730020C761 /* Color.swift */,
+				639C30B41F34F8C600DFEFDB /* UIColor+Hex.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				6346B9471ABD292600D8941E /* TermDefinitionViewController.swift in Sources */,
 				63AF6A171AB79CDB006E6055 /* QuizletHandler.swift in Sources */,
 				63B31C3E1B56E7410073C419 /* ReviewTableViewCell.swift in Sources */,
+				639C30B51F34F8C600DFEFDB /* UIColor+Hex.swift in Sources */,
 				63B4B9C21B47B04300D8D82C /* Theme.swift in Sources */,
 				6328A4661BEF150A00B17396 /* QuestionsSettingsTableViewController.swift in Sources */,
 				63AF6A241AB7A35B006E6055 /* QuestionCardTableViewCell.swift in Sources */,
@@ -748,7 +752,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acromace.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Quizzily/Supporting Files/Quizzily-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -770,7 +774,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acromace.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Quizzily/Supporting Files/Quizzily-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -792,7 +796,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acromace.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quizzily.app/Quizzily";
 			};
@@ -810,7 +814,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acromace.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quizzily.app/Quizzily";
 			};

@@ -53,7 +53,7 @@ class QuestionsTempTableViewController: PullDownTableViewController {
         Save the set to the local database when the save button is tapped
     */
     @IBAction func tapSaveButton(_ sender: AnyObject) {
-        QuizletHandler.saveTempSet(selectedSet!)
+        _ = QuizletHandler.saveTempSet(selectedSet!)
         disableSaveButton()
     }
 
