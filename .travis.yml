@@ -1,0 +1,10 @@
+language: objective-c
+osx_image: xcode9
+xcode_workspace: Quizzily.xcworkspace
+xcode_scheme: Quizzily 
+
+install:
+  - ./Scripts/install_swiftlint.sh
+
+script:
+  - set -o pipefail && xcodebuild test -workspace Quizzily.xcworkspace -scheme Quizzily -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty
