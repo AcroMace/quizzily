@@ -7,4 +7,4 @@ install:
   - ./Scripts/install_swiftlint.sh
 
 script:
-  - set -o pipefail && xcodebuild test -workspace Quizzily.xcworkspace -scheme Quizzily -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty
+  - set -o pipefail && xcodebuild -workspace Quizzily.xcworkspace -scheme Quizzily -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty
