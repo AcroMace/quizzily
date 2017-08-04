@@ -36,3 +36,6 @@ img
 index.html
 style.css
 
+# API Keys
+Quizzily/Keys.xcconfig
+

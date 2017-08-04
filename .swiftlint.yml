@@ -1,0 +1,12 @@
+disabled_rules:
+
+  # This should probably be disabled per file if necessary
+  - line_length
+
+  # Should enable later
+  - force_cast
+  - identifier_name
+  - large_tuple
+
+excluded:
+  - Pods

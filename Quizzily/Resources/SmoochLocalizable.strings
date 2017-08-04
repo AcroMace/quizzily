@@ -1,0 +1,10 @@
+/* 
+  SmoochLocalizable.strings
+  Quizzily
+
+  Created by Andy Cho on 2015-03-31.
+  Copyright (c) 2015 Andy Cho. All rights reserved.
+*/
+
+/* Conversation header. Uses CFBundleDisplayName */
+"This is the start of your conversation with the %@ team. We'll stay in touch to help you get the most out of your app.\nFeel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can." = "Feel free to leave us a message about anything that’s on your mind. We’ll get back to your questions, suggestions or anything else as soon as we can.";

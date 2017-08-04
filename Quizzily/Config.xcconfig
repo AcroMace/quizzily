@@ -1,0 +1,2 @@
+#include "Keys.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) QUIZLET_KEY=@\"$(QUIZLET_KEY)\" SMOOCH_KEY=@\"$(SMOOCH_KEY)\"

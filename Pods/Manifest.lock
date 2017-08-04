@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.5.0)
+  - MDCSwipeToChoose (0.2.3)
+  - Smooch (5.8.1)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - MDCSwipeToChoose
+  - Smooch
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
+  Smooch: fd450a4602e5c943dfb5d89e0d6a08b8d57b41b6
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: e9c72ce3afdbe00be1a82e788d5f760ba04705b4
+
+COCOAPODS: 1.2.1
