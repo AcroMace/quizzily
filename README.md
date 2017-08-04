@@ -1,10 +1,10 @@
+![Screenshot of Quizzily](https://github.com/AcroMace/quizzily/blob/gh-pages/img/truefalse.png)
+
 # Quizzily
 
 Quizzily creates games from your flashcards on Quizlet
 
 A Swift app using [Quizlet's API](https://quizlet.com/api/2.0/docs) and Core Data to create quizzes.
-
-![Screenshot of Quizzily](https://github.com/AcroMace/quizzily/blob/gh-pages/img/truefalse.png)
 
 ## Running
 
